@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MainBanner />
+    <Menu id="menu"/>
+    <div id="sections">
+      <section-one id="sectionOne"/>
+      <section-two id="sectionTwo"/>
+      <section-three id="sectionThree"/>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainBanner from './components/MainBanner/MainBanner.vue';
+import Menu from './components/Menu/Menu.vue';
+import SectionOne from './components/SectionOne/SectionOne.vue';
+import SectionThree from './components/SectionThree/SectionThree.vue';
+import SectionTwo from './components/SectionTwo/SectionTwo.vue';
+import Footer from './components/Footer/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainBanner,
+    Menu,
+    SectionOne,
+    SectionTwo,
+    SectionThree,
+    Footer
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app{
+    margin: -8px;
+    background-color: rgb(248, 248, 248);
+  }
+  #sections{
+    padding: 0 5%;
+  }
 </style>
